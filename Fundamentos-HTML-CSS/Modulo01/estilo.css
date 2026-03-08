@@ -41,3 +41,47 @@ ELEMENTO OUTROELEMENTO {
 
 } 
 */
+
+
+h2 {
+    background-color: rgb(100, 0, 200);
+    color: #00FF00;
+}
+
+/* ==== CORES NO CSS ====
+
+NOME DA COR:
+color: red;
+color: blue;
+color: green;
+
+RGB 
+R = red = vermelho
+H = green = verde
+B = blue = azul
+
+A cor preta é:
+R = 0%
+G = 0%
+B = 0%
+
+A cor branca é:
+R = 100%
+G = 100%
+B = 100%
+
+A cor vermelha é:
+R = 100%
+G = 0%
+B = 0% 
+
+Hexadecimal
+2 = vermelho = 0 a 9 e dps A - F
+2 = verde = 0 a 9 e dps A - F
+2 = azul =  0 a 9 e dps A - F
+
+vermelho = #FF0000
+verde = #00FF00
+azul = #0000FF
+
+*/
