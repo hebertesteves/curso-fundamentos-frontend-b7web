@@ -20,6 +20,31 @@ ul li {
     color: pink;
 }
 
+h2 {
+    background-color: rgb(100, 0, 200);
+    color: #00FF00;
+}
+
+p {
+    background-color: #00F;
+    /* border: 5px solid #00F;  */
+    border-radius: 5px;
+}
+
+div {
+    background-color: #0F0;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    border: 3px solid darkgreen;
+}
+
+img {
+    border: 5px solid red;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
 /* ==== Formas de aplicar estilo ao elemento ====
 NOME_DO_ELEMENTO {
 
@@ -41,12 +66,6 @@ ELEMENTO OUTROELEMENTO {
 
 } 
 */
-
-
-h2 {
-    background-color: rgb(100, 0, 200);
-    color: #00FF00;
-}
 
 /* ==== CORES NO CSS ====
 
