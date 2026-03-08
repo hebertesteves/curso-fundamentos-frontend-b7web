@@ -1,8 +1,43 @@
 img {
-    width: 200px;
+    width: 300px;
 }
 
-li {
-    color: aqua;
+#titulo  {
+    color: green;
+}
+
+.texto {
+    color: red;
+}
+
+#titulo,
+.texto {
+    font-size: 25px;
     font-weight: bold;
 }
+
+ul li {
+    color: pink;
+}
+
+/* ==== Formas de aplicar estilo ao elemento ====
+NOME_DO_ELEMENTO {
+
+}
+
+#ID_DO_ELEMENTO {
+
+}
+
+.CLASS_DO_ELEMENTO {
+
+}
+
+ELEMENTO, ELEMENTO {
+
+}
+
+ELEMENTO OUTROELEMENTO {
+
+} 
+*/
