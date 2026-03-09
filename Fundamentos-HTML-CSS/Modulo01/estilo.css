@@ -47,12 +47,17 @@ img {
     border: 5px solid red;
     border-radius: 30px;
     overflow: hidden;
+    width: inherit;
+    max-width: 450px;
 }
 
 .exemplo {
-    border: 1px solid #0F0;
+    /* border: 1px solid #0F0;
     padding: 10px 50px 15px 5px;
-    margin: 10px;
+    margin: 10px; */
+    background-color: #000;
+    width: 500px;
+    height: 500px;
 }
 
 /* ==== Formas de aplicar estilo ao elemento ====
