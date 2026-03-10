@@ -66,6 +66,19 @@ img {
     margin: 20px;
 }
 
+.link {
+    color: rgb(9, 0, 128);
+    font-size: 30px;
+}
+
+.link:hover {
+    color: red;
+}
+
+.link:visited {
+    color: pink;
+}
+
 /* ==== Formas de aplicar estilo ao elemento ====
 NOME_DO_ELEMENTO {
 
