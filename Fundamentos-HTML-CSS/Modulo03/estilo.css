@@ -34,3 +34,37 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+table {
+    width: 600px;
+}
+
+th, td {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: left;
+}
+
+tbody tr:hover {
+    background-color: #EEE;
+}
+
+table thead {
+    background-color: rgb(141, 148, 141);
+}
+
+tbody td {
+    border-bottom: 1px solid #CCC;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #EEE;
+}
+
+table th {
+    font-weight: normal;
+}
+
+/* table tbody {
+    background-color: rgb(21, 86, 206);
+} */
