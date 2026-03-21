@@ -13,15 +13,33 @@
         <h2>Área de cadastro</h2>
         <form action="../Modulo01-02/paginas/login.html" method="GET">
 
-            <label for="nome">Nome Completo:
-                <input type="text" name="usuario" value="Digite seu nome" id="nome" />
+            <label>
+                Nome Completo:<br/>
+                <input type="text" name="usuario" />
             </label>
 
-            </br></br>
+            <label>
+                Descrição:<br/>
+                <textarea name="descricao"></textarea>
+            </label>
 
-            <input type="checkbox" id="teste">
-            <label for="teste">Eu declaro que li e aceito os termos de uso.</label>
+            <label>
+                Categoria:</br>
+                <select name="categoria">
+                    <option value="1">Categoria 1</option>
+                    <option value="2">Categoria 2</option>
+                    <option value="3">Categoria 3</option>
+                    <option value="4">Categoria 4</option>
+                    <option value="5">Categoria 5</option>
+                </select>
+            </label>
+            
+            <label>
+                <input type="checkbox" />
+                Eu declaro que li e aceito os <a href="paginas/termos.html" target="_blank">termos de uso.</a>
+            </label>
 
+            <button>Fazer cadastro</button>
             <!-- 
                 <textarea name="descricao" style="width: 400px; height: 200px;"></textarea>
                 <button>Fazer cadastro</button>
@@ -35,6 +53,7 @@
                     <input type="radio" name="sexo"/>
 
                     <input type="email"> 
+                    <input type="text" name="usuario" value="Digite seu nome" />
                 -->
 
             <!-- Input no HTML5 
@@ -51,13 +70,19 @@
                     <input type="week" name="usuario"> 
                 -->
 
+            <!-- 
+            </br></br>
+
             <select name="order">
                 <option></option>
                 <option value="bestseller">Mais vendidos</option>
                 <option value="last">Recentes</option>
             </select>
 
-            <input type="submit" value="Fazer Cadastrar">
+            </br></br>
+
+            <input type="submit" value="Fazer Cadastrar"> 
+            -->
 
         </form>
 
