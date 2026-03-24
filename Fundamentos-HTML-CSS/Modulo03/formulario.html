@@ -100,18 +100,18 @@
         </form>
 
         <h2>Área de login</h2>
-        <form method="POST">
+        <form method="POST" action="arquivo.php">
 
             <fieldset>
                 <legend>Dados Pessoais</legend>
                 <label>
                     Primeiro Nome:</br>
-                    <input type="text" name="name">
+                    <input type="text" name="name" required minlength="2" maxlength="4">
                 </label>
 
                 <label>
                     Sobrenome:</br>
-                    <input type="text" name="lastname">
+                    <input type="text" name="lastname" required>
                 </label>
                             
             </fieldset>
