@@ -14,7 +14,7 @@ body {
     padding-bottom: 20px;
 }
 
-.sobre {
+.sobre, .precos {
     line-height: 25px;
     margin-bottom: 10px;
 }
@@ -37,4 +37,62 @@ ul {
 .texto {
     font-size: 16px;
     padding-bottom: 10px;
+}
+
+table {
+    width: 800px;
+}
+
+table thead {
+    background-color: #2F5E4E;
+    color: #FFF;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+}
+
+thead td {
+    border: 2px solid #2F5E4E;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+tbody td {
+    border: 2px solid #CCC;
+    padding: 5px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 20px;
+}
+
+input[type="text"], .input-text, .assunto {
+    width: 300px;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.campo-mensagem {
+    width: 300px;
+    height: 200px;
+    resize: none;
+    font-size: 14px;
+}
+
+.btn-enviar {
+    background-color: #2F5E4E;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+    width: 300px;
+    border: 2px solid #2F5E4E;
+    border-radius: 5px;
+}
+
+.form-contato {
+    background-color: #E8F3EE;
+    width: 400px;
 }

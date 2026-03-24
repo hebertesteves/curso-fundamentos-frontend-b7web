@@ -41,8 +41,83 @@
         </p>
     </div>
 
+    <div class="precos">
+        <p class="titulo">Tabela de Preços</p>
+
+        <table >
+            <thead>
+            <tr>
+                <td>Produto</td>
+                <td>Categoria</td>
+                <td>Preço</td>
+                <td>Disponibilidade</td>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Notebook</td>
+                    <td>Computadores</td>
+                    <td>R$ 3500</td>
+                    <td>Em estoque</td>
+                </tr>
+                <tr>
+                    <td>Smartphone</td>
+                    <td>Celulares</td>
+                    <td>R$ 2500</td>
+                    <td>Fora de estoque</td>
+                </tr>
+                <tr>
+                    <td>Fone Bluetooth</td>
+                    <td>Acessórios</td>
+                    <td>R$ 150</td>
+                    <td>Em estoque</td>
+                </tr>
+                <tr>
+                    <td>Teclado Mecânico</td>
+                    <td>Acessórios</td>
+                    <td>R$ 450</td>
+                    <td>Em estoque</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+
     <div>
-        <p class="titulo">Nossos Produtos</p>
+        <form action="POST" class="form-contato">
+            <p class="titulo">Entre em Contato</p>
+
+            <label>
+                Nome:</br>
+                <input type="text" name="nome">
+            </label>
+
+            <label>
+                Email:</br>
+                <input type="email" name="email" class="input-text">
+            </label>
+
+            <label>
+                Telefone:</br>
+                <input type="tel" name="telefone" class="input-text">
+            </label>
+
+            <label>
+                Assunto:</br>
+                <select name="assunto" class="assunto">
+                    <option value=""></option>
+                    <option value="duvidas">Duvidas</option>
+                    <option value="devolucao">Devolução</option>
+                </select>
+            </label>
+
+            <label>
+                Mensagem:</br>
+                <textarea name="mensagem" class="campo-mensagem"></textarea>
+            </label>
+
+            <button class="btn-enviar">Enviar Mensagem</button>
+        </form>
     </div>
 
     </section>
