@@ -11,7 +11,7 @@
         <h1>Página de Formulario</h1>
 
         <h2>Área de cadastro</h2>
-        <form action="../Modulo01-02/paginas/login.html" method="GET">
+        <!-- <form action="../Modulo01-02/paginas/login.html" method="GET">
 
             <label>
                 Nome Completo:<br/>
@@ -97,7 +97,7 @@
             <input type="submit" value="Fazer Cadastrar"> 
             -->
 
-        </form>
+        </form> -->
 
         <h2>Área de login</h2>
         <form method="POST" action="arquivo.php">
@@ -111,7 +111,22 @@
 
                 <label>
                     Sobrenome:</br>
-                    <input type="text" name="lastname" required>
+                    <input type="text" name="lastname">
+                </label>
+
+                <label>
+                    Email:</br>
+                    <input type="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="endereco de email" required/>
+                </label>
+
+                <label>
+                    Idade:</br>
+                    <input type="number" name="age" step="2" min="18" max="120" required>
+                </label>
+
+                <label>
+                    Data de Nascimento:</br>
+                    <input type="date" name="birthdate" min="2021-06-14" required>
                 </label>
                             
             </fieldset>
