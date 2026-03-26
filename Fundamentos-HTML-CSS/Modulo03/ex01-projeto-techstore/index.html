@@ -84,31 +84,43 @@
     </div>
 
     <div>
-        <form action="POST" class="form-contato">
+        <form method="POST" action="../formulario1.html" class="form-contato" enctype="multipart/form-data">
+            <input type="hidden" name="token" value="token_fake">
+
             <p class="titulo">Entre em Contato</p>
 
             <label>
                 Nome:</br>
-                <input type="text" name="nome">
+                <input type="text" name="nome" minlength="2" maxlength="40" required>
             </label>
 
             <label>
                 Email:</br>
-                <input type="email" name="email" class="input-text">
+                <input type="email" name="email" minlength="8" maxlength="40" class="input-text" required>
             </label>
 
             <label>
                 Telefone:</br>
-                <input type="tel" name="telefone" class="input-text">
+                <input type="tel" name="telefone" maxlength="11" minlength="11" class="input-text" required>
+            </label>
+
+            <label>
+                Idade:</br>
+                <input type="number" name="age" min="18" max="120" required />
             </label>
 
             <label>
                 Assunto:</br>
-                <select name="assunto" class="assunto">
+                <select name="assunto" class="assunto" required>
                     <option value=""></option>
                     <option value="duvidas">Duvidas</option>
                     <option value="devolucao">Devolução</option>
                 </select>
+            </label>
+            
+            <label>
+                Foto:</br>
+                <input type="file" accept="image/*" />
             </label>
 
             <label>
