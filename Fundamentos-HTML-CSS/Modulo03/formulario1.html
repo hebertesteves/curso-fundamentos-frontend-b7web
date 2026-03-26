@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+
+    <body>
+        <h1>Página de Formulario</h1>
+
+        <form method="GET" action="arquivo.php">
+            <input type="hidden" name="country" value="BR" />
+
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <label>
+                    Primeiro Nome:</br>
+                    <input type="text" name="name" required minlength="2" maxlength="30">
+                </label>
+
+                <label>
+                    Sobrenome:</br>
+                    <input type="text" name="lastname">
+                </label>
+                            
+            </fieldset>
+
+            <fieldset>
+                <legend>Dados Profissionais</legend>
+                <label>
+                    Nome da empresa:</br>
+                    <input type="text" name="companyname">
+                </label>
+
+                <label>
+                    Cargo na empresa:</br>
+                    <input type="text" name="companyjobtitle">
+                </label>
+            </fieldset>
+
+            <input type="submit" value="Cadastrar">
+        </form>
+
+    </body>
+
+</html>
