@@ -10,7 +10,7 @@
     <body>
         <h1>Página de Formulario</h1>
 
-        <form method="GET" action="arquivo.php">
+        <form method="POST" action="arquivo.php" enctype="multipart/form-data">
             <input type="hidden" name="country" value="BR" />
 
             <fieldset>
@@ -23,6 +23,12 @@
                 <label>
                     Sobrenome:</br>
                     <input type="text" name="lastname">
+                </label>
+
+                <label>
+                    Foto:</br>
+                    <input type="file" name="photo" accept="image/*"/>
+                    <!-- <input type="file" name="photo" accept="application/pdf"/> -->
                 </label>
                             
             </fieldset>
