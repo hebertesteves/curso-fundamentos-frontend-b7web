@@ -13,6 +13,16 @@ body {
     border: 5px solid #0F0;
 }
 
+/* Vai ser aplicado o color do .container, pois e mais especifico */
+div {
+    color: #00F;
+}
+
+/* Ordem de cima para baixo
+ body .container {
+    color: #0F0;
+}  */
+
 .container strong {
     border: 5px solid #000;
 }
