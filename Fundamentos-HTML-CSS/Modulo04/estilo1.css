@@ -1,24 +1,44 @@
-html {
+/* html {
     font-size: 40px;
-}
+} */
 
-body {
+/* body {
     font-size: 20px;
-}
+} */
 
 /* 30px está olhando para o html */
-h1 {
+/* h1 {
     font-size: 3rem; 
-}
+} */
 
-.box {
+/* .box {
     font-size: 2rem;
-}
+} */
 
-.box-interno {
-    /* width: 10em;
-    height: 10em; */
+/* .box-interno {
+    width: 10em;
+    height: 10em; 
     width: 10rem;
     height: 10rem;
     background-color: #999;
+} */
+
+body {
+    font-family: Courier;
+}
+
+.box {
+    /* width: 50%; */
+    width: 300px;
+    height: 400px;
+    /* width: 20ex; */
+    background-color: #999;
+}
+
+.box-interno {
+    /* width: 50%;
+    height: 50%; */
+    background-color: #333;
+    color: #FFF;
+    width: 15ch;
 }
