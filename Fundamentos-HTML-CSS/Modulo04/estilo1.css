@@ -45,6 +45,15 @@
 
 body {
     margin: 0;
+    /* background-color: greenyellow; */
+    /* background-color: #0000FF; */
+    /* background-color: rgb(0, 255, 0); */
+    /* background-color: hsl(0, 100%, 50%); */
+    color: #FF0000;
+}
+
+h1 {
+    border: 2px solid currentColor;
 }
 
 /* .box {
@@ -55,7 +64,7 @@ body {
     /* height: 50vmax; 
 } */
 
-.box {
+/* .box {
     font-size: 15px;
     color: blue;
 }
@@ -68,4 +77,4 @@ h1 {
 .box h1 {
     font-size: inherit;
     color: inherit;
-}
+} */
