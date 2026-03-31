@@ -46,9 +46,9 @@ Durante o curso, foram estudados os seguintes tópicos:
 
 - **Curso:** Fundamentos em HTML/CSS  
 - **Plataforma:** B7Web  
-- **Carga horária:** (preencher posteriormente)  
+- **Carga horária:** 12 horas
 
-📎 **Certificado:** [Acessar certificado](LINK_DO_CERTIFICADO)
+📎 **Certificado:** [Acessar certificado](https://app.b7web.com.br/certificates/69410eba-3cd1-430b-ae85-0e6c196ac8a6)
 
 ---
 
