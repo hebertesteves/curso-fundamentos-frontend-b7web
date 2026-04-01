@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 01</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Perfil Profissional</h1>
+
+    <!-- Seção Sobre mim -->
+    <div id="card-secao">
+        <p class="titulo-secao">Sobre mim</p>
+        <img src="img/foto-perfil.jpg" alt="Foto de Perfil" id="foto-perfil">
+        <p class="texto">Olá! Sou <em> desenvolvedor web </em> com experiência em criar sites e aplicações modernas. Amo codar e aprender coisas novas.</p>
+        <p class="texto">Tenho habilidades em <strong> HTML, CSS </strong> e <strong> JavaScript </strong>, e já trabalhei em projetos utilizando <strong> SQL </strong> e <strong> Git.</strong> Estou sempre em busca de novos desafios e oportunidades para aprimorar minhas habilidades e contribuir em projetos inovadores.</p>
+    </div>
+
+    <!-- Habilidades -->
+    <div id="card-habilidades">
+        <p class="titulo-secao">Habilidades</p>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Git</li>
+            <li>SQL</li>
+        </ul>
+    </div>
+
+    <!-- Seção Experiencia -->
+    <div id="card-experiencia">
+        <p class="titulo-secao">Experiência</p>
+        <table>
+            <thead>
+                    <tr>
+                        <th>Empresa</th>
+                        <th>Cargo</th>
+                        <th>Ano</th>
+                    </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Empresa A</td>
+                    <td>Estagiário TI</td>
+                    <td>2022</td>
+                </tr>
+                <tr>
+                    <td>Empresa B</td>
+                    <td>Desenvolvedor Frontend</td>
+                    <td>2023</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Seção Contato -->
+    <div id="card-contato">
+        <p class="titulo-secao">Contato</p>
+        <form method="GET">
+            <label>
+                Nome:<br>
+                <input type="text" name="nome" placeholder="Digite seu nome" minlength="2" maxlength="40" required>
+            </label>
+            
+            <label>
+                Email:<br>
+                <input type="email" name="email" placeholder="email@gmail.com" maxlength="40" required>
+            </label>
+
+            <label>
+                Assunto:<br>
+                <input type="text" name="assunto" placeholder="Digite o assunto" maxlength="20" required>
+            </label>
+
+            <label>
+                Mensagem:<br>
+                <textarea name="mensagem" placeholder="Digite sua mensagem" maxlength="150" required></textarea>
+            </label>
+
+            <input type="submit" value="Enviar" id="btn-enviar">
+        </form>
+
+    </div>
+    
+</body>
+</html>

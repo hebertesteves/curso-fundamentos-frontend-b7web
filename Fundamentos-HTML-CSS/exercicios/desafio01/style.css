@@ -1,0 +1,88 @@
+body {
+    margin: 0px;
+    background-color: #E5E7EB;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: #374151;
+    text-align: center;
+    font-size: 44px;
+    font-weight: bold;
+}
+
+.titulo-secao {
+    font-size: 24px;
+    color: #374151;
+    font-weight: bold;
+}
+
+div {
+    margin: 50px;
+    background-color: #FFF;
+    border-radius: 20px;
+    width: 1000px;
+    padding: 5px 20px;
+}
+
+.texto {
+    font-size: 18px;
+    line-height: 25px;
+}
+
+#foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+}
+
+#card-habilidades ul li {
+    font-size: 18px;
+    padding-bottom: 7px;
+    list-style-type: square;
+}
+
+#card-experiencia table {
+    font-size: 18px;
+    text-align: center;
+    width: 500px;
+    padding-bottom: 24px;
+}
+
+#card-experiencia thead tr th {
+    background-color: #334155;
+    border: 1px solid #374151;
+    color: #FFF;
+    padding: 8px;
+    font-weight: bold;
+}
+
+#card-experiencia tbody td {
+    padding: 8px;
+    border: 1px solid #374151;
+}
+
+#card-contato form label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+#card-contato form input, #card-contato form textarea {
+    width: 400px;
+    padding: 8px;
+}
+
+#btn-enviar {
+    background-color: #4F6FA3;
+    color: #FFF;
+    border: 2px solid #4F6FA3;
+    border-radius: 100px;
+    font-size: 18px;
+    margin-bottom: 24px;
+}
+
+#btn-enviar:hover {
+    background-color: #3B5A8A;
+    color: #FFF;
+}
