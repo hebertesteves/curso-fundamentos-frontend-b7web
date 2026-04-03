@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    background-color: #E5E7EB;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.card {
+    background-color: #FFF;
+    margin: 200px 600px;
+    padding: 0px 30px;
+    width: 600px;
+    border-radius: 15px;
+}
+
+.titulo {
+    color: #374151;
+}
+
+.descricao {
+    color: #4B5563;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.preco {
+    color: #16A34A;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#img-produto {
+    margin-left: 100px;
+}
+
+.btn {
+    width: inherit;
+    background-color: #4F6FA3;
+    color: #FFF;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    margin-bottom: 35px;
+}
+
+.btn:hover {
+    background-color: #3B5A8A;
+}
