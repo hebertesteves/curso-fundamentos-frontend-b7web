@@ -5,3 +5,13 @@
 960
 1200
 1600 */
+
+img {
+    width: 500px;
+    height: 500px;
+    /* object-fit: fill; */
+    /* object-fit: contain; */
+    /* object-fit: cover; */
+    /* object-fit: none; */
+    object-fit: scale-down;
+}
