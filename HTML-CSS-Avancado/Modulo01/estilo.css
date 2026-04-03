@@ -15,3 +15,35 @@ img {
     /* object-fit: none; */
     object-fit: scale-down;
 }
+
+body {
+    background-color: #0F0;
+}
+
+@media (min-width: 1000px) {
+    body {
+        background-color: #00F;
+    }
+}
+
+@media (min-width:700px) and (max-width: 1000px) {
+    body {
+        background-color: purple;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 700px) {
+    body {
+        background-color: royalblue;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        background-color: #F00;
+    }
+
+    h1 {
+        font-size: 15px;
+    }
+}
