@@ -38,7 +38,7 @@ body {
     }
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
     body {
         background-color: #F00;
     }
@@ -46,4 +46,4 @@ body {
     h1 {
         font-size: 15px;
     }
-}
+} */
