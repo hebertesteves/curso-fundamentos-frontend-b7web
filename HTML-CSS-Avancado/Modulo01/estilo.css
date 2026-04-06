@@ -17,12 +17,48 @@ img {
 }
 
 body {
-    background-color: #0F0;
+    /* background-color: #0F0; */
 }
 
-@media (min-width: 1000px) {
+table, td {
+    border: 2px solid #000;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+@media only print {
+    /* h1 {
+        font-size: 70px;
+        font-weight: normal;
+    }
+
+    table, td {
+        border: 0;
+    } */
+
+    h1 {
+        display: none;
+    }
+}
+
+/* @media all {
+
+} */
+
+/* @media only screen {
+
+} */
+
+/* @media (min-width: 1000px) {
     body {
         background-color: #00F;
+    }
+
+    h1 {
+        font-size: 70px;
     }
 }
 
@@ -30,13 +66,27 @@ body {
     body {
         background-color: purple;
     }
+
+    h1 {
+        font-size: 50px;
+    }
 }
 
 @media (min-width: 300px) and (max-width: 700px) {
     body {
         background-color: royalblue;
     }
+
+     h1 {
+        font-size: 30px;
+    }
 }
+
+@media (max-width: 300px) {
+    h1 {
+        font-size: 14px;
+    }
+} */
 
 /* @media (max-width: 600px) {
     body {
