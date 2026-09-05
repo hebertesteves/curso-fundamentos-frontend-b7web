@@ -29,8 +29,13 @@ console.log(x);
 let nome1 = "Hebert";
 let sobrenome1 = "Esteves";
 
-let nomeCompleto = nome1 + " " + sobrenome1;
-console.log(nomeCompleto);
+// let nomeCompleto = nome1 + " " + sobrenome1;
+let nomeCompleto = `${nome1} ${sobrenome1} da Silva`;
+console.log("Nome completo: " + nomeCompleto);
+
+let idade1 = 20;
+let idadeString = `Idade: ${idade1 + 2} anos`;
+console.log(idadeString);
 
 let n1 = 15;
 let n2 = 20;
