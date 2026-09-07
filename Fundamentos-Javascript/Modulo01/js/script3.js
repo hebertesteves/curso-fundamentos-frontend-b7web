@@ -34,3 +34,11 @@ if (idade >= 18 || idade < 60) {
 //     console.log("Idade adicionada com suceso!");
 //     console.log(idade);
 // }
+
+let adulto = idade >= 18 && idade < 60;
+
+if (adulto) {
+    console.log("É adulto");
+} else {
+    console.log("Não é adulto");
+}
