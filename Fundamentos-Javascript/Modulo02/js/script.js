@@ -15,7 +15,10 @@ function somar(n1, n2) {
 somar(10, 7);
 
 function nomeCompleto(nome, sobrenome) {
-    console.log(`Nome completo: ${nome} ${sobrenome}`);
+    return `${nome} ${sobrenome}`;
 }
 
-nomeCompleto("Hebert", "Esteves");
+let completo = nomeCompleto("Hebert", "Esteves");
+console.log("Nome completo: " + completo);
+
+// ENTRADA -> PROCESSAMENTO -> SAIDA
