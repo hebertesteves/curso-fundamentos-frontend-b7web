@@ -98,3 +98,28 @@ let metragem = 123;
 let quartos = 3;
 let preco = calcularImovel(metragem, quartos);
 console.log(`A casa custa R$ ${preco}`);
+
+// Exercicio de funções #5
+
+/*
+Crie uma função que valide usuário e senha.
+Usuário correto: pedro
+Senha correta 123
+*/
+
+function validar(usuario, senha) {
+    if (usuario == 'pedro' && senha == '123') {
+        return true;
+    }
+
+    return false;
+}
+
+let usuario = 'hebert';
+let senha = '1234';
+let validacao = validar(usuario, senha);
+if (validacao) {
+    console.log("Acesso concedido.");
+} else {
+    console.log("Acesso NEGADO!");
+}
