@@ -14,3 +14,23 @@ let lista = [
 ];
 
 console.log(lista[4][0]);
+
+let ingredientes = [
+    "agua",
+    "farinha",
+    "ovo",
+    "corante",
+    "sal"
+];
+
+console.log(`Total de ingredientes:  ${ingredientes.length}`);
+ingredientes.push("fermento");
+
+console.log(ingredientes);
+console.log(`Total de ingredientes:  ${ingredientes.length}`);
+
+ingredientes.pop();
+ingredientes.shift();
+
+// pop = remove o ultimo
+// shift = remove o primeiro
