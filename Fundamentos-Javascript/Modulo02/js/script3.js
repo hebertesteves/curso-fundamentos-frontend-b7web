@@ -31,3 +31,14 @@ let personagem1 = {
 
 console.log(personagem1.carros[0].cor);
 console.log(personagem1.carros[1].modelo);
+
+let pessoa = {
+    nome: "Hebert",
+    sobrenome: "Esteves",
+    idade: 90,
+    nomeCompleto: function() {
+        return `${this.nome} ${this.sobrenome}`;
+    }
+}
+
+console.log(`Nome completo: ${pessoa.nomeCompleto()}`);
