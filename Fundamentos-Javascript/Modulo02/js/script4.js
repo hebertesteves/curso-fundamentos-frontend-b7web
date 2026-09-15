@@ -34,3 +34,21 @@ while (numero <= 10) {
     console.log(`O número da vez é ${numero}`);
     numero++;
 }
+
+// ====================================================================== //
+
+// Exercicio de loops #8
+
+// 1. Faça um loop que mostre que todas as frutas
+let fruits = ["Maça", "Uva", "Banana"];
+for (let fruit of fruits) {
+    console.log(fruit);
+}
+
+// 2. Conte de 1 até 100 através de um WHILE
+let n = 1;
+
+while (n <= 100) {
+    console.log(n);
+    n++;
+}
