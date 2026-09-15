@@ -27,3 +27,10 @@ for (let cor of cores) {
     cor.nome = cor.nome.toUpperCase();
     console.log(`Nome: ${cor.nome} - ${cor.qt}`);
 }
+
+let numero = 0;
+
+while (numero <= 10) {
+    console.log(`O número da vez é ${numero}`);
+    numero++;
+}
