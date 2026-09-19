@@ -1,5 +1,6 @@
 // DOM = Document Object Model
 
+/*
 let elementosH1 = document.getElementsByTagName("h1");
 console.log(elementosH1[0]); // Vai retornar <h1>Olá Javascript</h1>
 
@@ -14,9 +15,19 @@ console.log(divTeste2);
 
 let listaLiComIdTeste = document.querySelectorAll("#teste ul li");
 console.log(listaLiComIdTeste);
+*/
 
 function clicou() {
-    console.log("Clicou no botão");
+    const teste = document.querySelector("#teste");
+    // console.log(teste.children[0].children)
+
+    const ul = teste.querySelector("ul");
+    ul.innerHTML += "<li>Item alterado</li>";
+
+    ul.children[0].innerHTML = "Primeiro item <strong>alterado</strong>!"
+    ul.children[1].innerText = "Segundo item alterado!"
+
+    // ul.outerHTML = "<strong> Remove o ul e faz aparecer um strong</strong>";
 }
 
 let botao = document.querySelector(".botao");
