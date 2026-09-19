@@ -14,3 +14,16 @@ console.log(divTeste2);
 
 let listaLiComIdTeste = document.querySelectorAll("#teste ul li");
 console.log(listaLiComIdTeste);
+
+function clicou() {
+    console.log("Clicou no botão");
+}
+
+let botao = document.querySelector(".botao");
+botao.addEventListener("click", clicou);
+
+/*
+botao.addEventListener("click", () => {
+    clicou();
+});
+*/
