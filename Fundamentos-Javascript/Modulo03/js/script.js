@@ -22,12 +22,21 @@ function clicou() {
     // console.log(teste.children[0].children)
 
     const ul = teste.querySelector("ul");
-    ul.innerHTML += "<li>Item alterado</li>";
+    // ul.innerHTML += "<li>Item alterado</li>";
 
-    ul.children[0].innerHTML = "Primeiro item <strong>alterado</strong>!"
-    ul.children[1].innerText = "Segundo item alterado!"
+    // ul.children[0].innerHTML = "Primeiro item <strong>alterado</strong>!"
+    // ul.children[1].innerText = "Segundo item alterado!"
 
     // ul.outerHTML = "<strong> Remove o ul e faz aparecer um strong</strong>";
+
+    ul.children[0].append("(alterado)");
+    // ul.append("<li>Item adicionado</li>");
+
+    let newLi = document.createElement("li");
+    newLi.innerText = "Item adicionado via appendChild";
+    ul.append(newLi);
+    // ul.appendChild(newLi);
+    // ul.prepend(newLi); 
 }
 
 let botao = document.querySelector(".botao");
