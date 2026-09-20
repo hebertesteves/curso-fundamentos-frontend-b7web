@@ -37,6 +37,20 @@ function clicou() {
     ul.append(newLi);
     // ul.appendChild(newLi);
     // ul.prepend(newLi); 
+
+    let newBotao = document.createElement("button");
+    newBotao.innerText = "Botão";
+    // ul.after(newBotao);
+    // ul.before(newBotao);
+
+    let newUl = document.createElement("ul");
+    ul.after(newUl);
+
+    for (let i = 0; i < 5; i++) {
+        let newLi = document.createElement("li");
+        newLi.innerHTML = "Item add " + (i + 1);
+        newUl.append(newLi);
+    }
 }
 
 let botao = document.querySelector(".botao");
