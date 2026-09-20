@@ -17,6 +17,7 @@ let listaLiComIdTeste = document.querySelectorAll("#teste ul li");
 console.log(listaLiComIdTeste);
 */
 
+/*
 function clicou() {
     const teste = document.querySelector("#teste");
     // console.log(teste.children[0].children)
@@ -50,6 +51,29 @@ function clicou() {
         let newLi = document.createElement("li");
         newLi.innerHTML = "Item add " + (i + 1);
         newUl.append(newLi);
+    }
+}
+*/
+
+function clicou() {
+    const input = document.querySelector("input");
+    const botao = document.querySelector(".botao");
+    // console.log(input.getAttribute("type"));
+
+    // if (input.hasAttribute("placeholder")) {
+    //     console.log("Tem placeholder SIM");
+    // } else {
+    //     console.log("Não tem placeholder...");
+    // }
+
+    // input.setAttribute("placeholder", "Placeholder alterado!!!");
+
+    if (input.getAttribute("type") === "text") {
+        input.setAttribute("type", "password");
+        botao.innerText = "Mostrar senha";
+    } else {
+        input.setAttribute("type", "text");
+        botao.innerText = "Ocultar Senha";
     }
 }
 
