@@ -115,17 +115,28 @@ function fazerAcao() {
 }
 
 function apertou() {
-    console.log("APERTOU!")
+   // console.log("APERTOU!");
 }
 
 function segurou() {
-    console.log("SEGUROU!")
+   // console.log("SEGUROU!");
 }
 
-function soltou() {
-    console.log("SOLTOU!")
+function soltou(event) {
+    // console.log("SOLTOU!");
+    console.log("TECLA APERTADA: " + event.code);
+    // console.log(event.key);
+    console.log("SHIFT? " + event.shiftKey);
+    console.log("CTRL? " + event.ctrlKey);
+    console.log("ALT? " + event.altKey);
+    console.log("=============================")
 }
 
-document.addEventListener("keydown", apertou);
-document.addEventListener("keypress", segurou);
-document.addEventListener("keyup", soltou);
+// document.addEventListener("keydown", apertou);
+// document.addEventListener("keypress", segurou);
+// document.addEventListener("keyup", soltou);
+
+/*
+const input = document.querySelector("input");
+input.addEventListener("keyup", soltou);
+*/
