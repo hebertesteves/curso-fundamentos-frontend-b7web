@@ -91,4 +91,25 @@ function fazerAcao() {
     
     li.style.backgroundColor = "#00F";
     li.style.fontSize = "20px";
+
+    const button = document.querySelector("button");
+    /*
+    if (button.classList.contains("azul")) {
+        button.classList.remove("azul");
+        button.classList.add("verde");
+    } else {
+        button.classList.add("azul");
+        button.classList.remove("verde");
+    }
+    */
+
+    // button.classList.toggle("azul");
+
+    if (button.classList.contains("azul")) {
+        button.classList.replace("azul", "verde");
+    } else {
+        button.classList.replace("verde", "azul");
+    }
+    
+    console.log(button.classList);
 }
