@@ -8,40 +8,47 @@
 // FUNÇÕES/OBJETOS
 
 class Person {
-    age = 0;
+    _age = 0;
     steps = 0;
 
-    constructor(name) {
-        this.name = name;
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
     takeAStep() {
         this.steps++;
     }
 
-    setAge(newAge) {
+    get fullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+
+    get age() {
+        return this._age;
+    }
+
+    set age(newAge) {
         if (typeof newAge == 'number') {   
-            this.age = newAge;
-        } else {
-            console.log("Idade não aceita. (Só números)");
-        } 
+            this._age = newAge;
+        }
     }
 }
 
-let p1 = new Person("Hebert");
-let p2 = new Person("Maria");
-let p3 = new Person("Pedro");
+let p1 = new Person("Hebert", "Esteves");
+let p2 = new Person("Maria", "Leite");
+let p3 = new Person("Pedro", "Duarte");
 
-p1.setAge(21);
+p1.age = 20;
 
-console.log(`P1 = ${p1.name} tem ${p1.age} anos.`);
-console.log(`P2 = ${p2.name} tem ${p2.age} anos.`);
-console.log(`P2 = ${p3.name} tem ${p3.age} anos.`);
+console.log(`P1 = ${p1.fullName} tem ${p1.age} anos.`);
+console.log(`P2 = ${p2.fullName} tem ${p2.age} anos.`);
+console.log(`P3 = ${p3.fullName} tem ${p3.age} anos.`);
 
 p1.takeAStep();
 p1.takeAStep();
 p2.takeAStep();
 
-console.log(`Passos P1: ${p1.name}: ${p1.steps}`);
-console.log(`Passos P2: ${p2.name}: ${p2.steps}`);
-console.log(`Passos P3: ${p3.name}: ${p3.steps}`);
+console.log(`Passos P1: ${p1.fullName}: ${p1.steps}`);
+console.log(`Passos P2: ${p2.fullName}: ${p2.steps}`);
+console.log(`Passos P3: ${p3.fullName}: ${p3.steps}`);
