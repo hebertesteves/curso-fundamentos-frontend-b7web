@@ -37,14 +37,20 @@ class Student extends Person {
     }
 }
 
+function createPerson(name, age) {
+    let p = new Person(name);
+    p.age = age;
+    return p;
+}
+
 let s1 = new Student("Hebert", 1);
 s1.age = 20;
 
 console.log(`${s1.name} tem ${s1.age} anos e matrícula #${s1.id}`);
 s1.sayHello();
 
-let p1 = new Person("Hebert");
+let p1 = createPerson("Hebert", 90);
 p1.sayHi();
 
-console.log(`${p1.name} tem ${Person.hands} mãos.`);
+console.log(`${p1.name} tem ${p1.age} anos e tem ${Person.hands} mãos.`);
 //Person.sayHi();
