@@ -1,4 +1,5 @@
 class Person {
+    static hands = 2;
     _age = 0;
 
     constructor(name) {
@@ -16,8 +17,12 @@ class Person {
     }
 
     sayHi() {
-        console.log(`${this.name} diz OI`);
+        console.log(`Oi, eu sou ${this.name} e tenho ${Person.hands} mãos.`);
     }
+
+    // static sayHi() {
+    //     console.log("Oi");
+    // }
 }
 
 class Student extends Person {
@@ -32,8 +37,14 @@ class Student extends Person {
     }
 }
 
-let p1 = new Student("Hebert", 1);
-p1.age = 20;
+let s1 = new Student("Hebert", 1);
+s1.age = 20;
 
-console.log(`${p1.name} tem ${p1.age} anos e matrícula #${p1.id}`);
-p1.sayHello();
+console.log(`${s1.name} tem ${s1.age} anos e matrícula #${s1.id}`);
+s1.sayHello();
+
+let p1 = new Person("Hebert");
+p1.sayHi();
+
+console.log(`${p1.name} tem ${Person.hands} mãos.`);
+//Person.sayHi();
