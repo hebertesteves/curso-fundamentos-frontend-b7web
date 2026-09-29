@@ -1,4 +1,4 @@
-// Knight ou Sorcerer - Guerreiro ou Mago
+// Knight ou Sorcerer
 // LittleMonster ou BigMonster
 
 class Character {
