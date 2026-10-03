@@ -7,6 +7,9 @@ function createPerson(name, lastName, age) {
         age,
         getFullName() {
             return `${this.name} ${this.lastName}`
+        },
+        start() {
+            console.log("Deu start na pessoa");
         }
     };
 }
@@ -28,6 +31,7 @@ let person2 = {
 */
 
 let person1 = createPerson("Hebert", "Esteves", 90);
+person1.start();
 let person2 = createPerson("Junior", "Fulano", 20);
 
 console.log(person1.name);
