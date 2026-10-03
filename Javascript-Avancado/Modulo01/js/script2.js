@@ -4,7 +4,10 @@ function createPerson(name, lastName, age) {
     return {
         name,
         lastName,
-        age
+        age,
+        getFullName() {
+            return `${this.name} ${this.lastName}`
+        }
     };
 }
 
@@ -29,3 +32,4 @@ let person2 = createPerson("Junior", "Fulano", 20);
 
 console.log(person1.name);
 console.log(person2.age);
+console.log(person1.getFullName());
