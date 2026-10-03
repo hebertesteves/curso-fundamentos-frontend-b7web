@@ -37,3 +37,25 @@ let person2 = createPerson("Junior", "Fulano", 20);
 console.log(person1.name);
 console.log(person2.age);
 console.log(person1.getFullName());
+
+const defaultUser = {
+    name: '',
+    email: '',
+    level: 1
+}
+
+let user1 = {
+    ...defaultUser,
+    name: "Hebert",
+    email: "hebert@gmail.com"
+}
+
+let admin1 = {
+    ...defaultUser,
+    name: "Admin Um",
+    email: "admin1@gmail.com",
+    level: 2
+}
+
+console.log(user1)
+console.log(admin1)
