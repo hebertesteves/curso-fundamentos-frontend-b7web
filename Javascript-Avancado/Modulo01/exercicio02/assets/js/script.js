@@ -7,6 +7,3 @@ stage.start(
     document.querySelector("#char"),
     document.querySelector("#monster")
 );
-
-console.log(knight);
-console.log(bigMonster);
