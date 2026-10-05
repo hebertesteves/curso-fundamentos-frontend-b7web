@@ -7,3 +7,14 @@
 let nome = "hebert";
 let sobrenome = "esteves";
 let nomeCompleto = nome + " " + sobrenome;
+
+/*
+Como a Web funciona (Requisição e Resposta)?
+Request = Requisição
+-> Cabeçalhos / Headers
+-> Corpo da Requisição / Body
+
+Response = Resposta
+-> Cabeçalhos / Headers
+-> Corpo / Body
+*/
