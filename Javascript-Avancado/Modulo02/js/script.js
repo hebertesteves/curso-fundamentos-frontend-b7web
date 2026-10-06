@@ -25,3 +25,15 @@ API = Application Programming Interface
 
 JSON = JavaScript Object Notation
 */
+
+/*
+O que é um Callback?
+
+call back = ligar de volta
+*/
+
+function clickCallback() {
+    alert("Clicou no botão!");
+}
+
+document.querySelector("#botao").addEventListener("click", clickCallback);
