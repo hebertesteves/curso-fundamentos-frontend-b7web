@@ -18,3 +18,10 @@ Response = Resposta
 -> Cabeçalhos / Headers
 -> Corpo / Body
 */
+
+/*
+Como uma API funciona?
+API = Application Programming Interface
+
+JSON = JavaScript Object Notation
+*/
