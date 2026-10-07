@@ -30,10 +30,23 @@ JSON = JavaScript Object Notation
 O que é um Callback?
 
 call back = ligar de volta
-*/
+
 
 function clickCallback() {
     alert("Clicou no botão!");
 }
 
 document.querySelector("#botao").addEventListener("click", clickCallback);
+*/
+
+function clicou() {
+    fetch("https://jsonplaceholder.typicode.com/posts")
+    .then((response) => {
+        return response.json();
+    })
+    .then((json) => {
+        alert(`Titulo do primeiro post: ${json[0].title}`);
+    })
+}
+
+document.querySelector("#botao").addEventListener("click", clicou);
