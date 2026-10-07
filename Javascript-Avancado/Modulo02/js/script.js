@@ -39,6 +39,7 @@ function clickCallback() {
 document.querySelector("#botao").addEventListener("click", clickCallback);
 */
 
+// Pelo DevTools em Network/Rede é possivel as requisições feitas
 function clicou() {
     fetch("https://jsonplaceholder.typicode.com/posts")
     .then((response) => {
