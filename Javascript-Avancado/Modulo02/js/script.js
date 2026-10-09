@@ -39,15 +39,30 @@ function clickCallback() {
 document.querySelector("#botao").addEventListener("click", clickCallback);
 */
 
+// Promise = Promessa
+
 // Pelo DevTools em Network/Rede é possivel as requisições feitas
 function clicou() {
-    fetch("https://jsonplaceholder.typicode.com/posts")
-    .then((response) => {
+    /*
+    let req = fetch("https://jsonplaceholder.typicode.com/posts");
+
+    req.then((response) => {
         return response.json();
     })
     .then((json) => {
         alert(`Titulo do primeiro post: ${json[0].title}`);
-    })
+    });
+    */
+
+    fetch("https://jsonplaceholder.typicode.com/posts")
+        .then((response) => {
+            return response.json();
+        })
+        .then((json) => {
+            alert(`Titulo do primeiro post: ${json[0].title}`);
+        });
+
+    alert("OPA, CLICOU!");
 }
 
 document.querySelector("#botao").addEventListener("click", clicou);
