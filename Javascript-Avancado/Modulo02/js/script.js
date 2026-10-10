@@ -60,9 +60,16 @@ function clicou() {
         })
         .then((json) => {
             alert(`Titulo do primeiro post: ${json[0].title}`);
+        })
+        .catch((error) => {
+            alert("Deu problema na requisição!");
+            console.log(error);
+        })
+        .finally(() => {
+            alert("OPA, ACABOU TUDO!");
         });
 
-    alert("OPA, CLICOU!");
+    // alert("OPA, CLICOU!");
 }
 
 document.querySelector("#botao").addEventListener("click", clicou);
