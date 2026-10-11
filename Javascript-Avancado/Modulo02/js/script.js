@@ -42,6 +42,16 @@ document.querySelector("#botao").addEventListener("click", clickCallback);
 // Promise = Promessa
 
 // Pelo DevTools em Network/Rede é possivel as requisições feitas
+/*
+    200 - OK
+    201 - Created
+    400 - Bad Request
+    401 - Unauthorized
+    403 - Forbidden
+    404 - Not Found
+    405 - Method Not Allowed
+    500 - Internal Server Error
+*/
 function clicou() {
     /*
     let req = fetch("https://jsonplaceholder.typicode.com/posts");
@@ -56,6 +66,7 @@ function clicou() {
 
     fetch("https://jsonplaceholder.typicode.com/posts")
         .then((response) => {
+            console.log(`Status: ${response.status}`);
             return response.json();
         })
         .then((json) => {
