@@ -52,7 +52,7 @@ document.querySelector("#botao").addEventListener("click", clickCallback);
     405 - Method Not Allowed
     500 - Internal Server Error
 */
-function clicou() {
+async function clicou() {
     /*
     let req = fetch("https://jsonplaceholder.typicode.com/posts");
 
@@ -64,6 +64,7 @@ function clicou() {
     });
     */
 
+    /*
     fetch("https://jsonplaceholder.typicode.com/posts")
         .then((response) => {
             console.log(`Status: ${response.status}`);
@@ -79,12 +80,19 @@ function clicou() {
         .finally(() => {
             alert("OPA, ACABOU TUDO!");
         });
+    */
 
-    // alert("OPA, CLICOU!");
+    let response = await fetch("https://jsonplaceholder.typicode.com/posts");
+    let json = await response.json();
+    console.log(`Status: ${response.status}`);
+    alert(`Titulo do primeiro post: ${json[0].title}`);
+
+    alert("OPA, CLICOU!");
 }
 
-function inserir() {
+async function inserir() {
     // GET, POST, PUT, DELETE
+    /*
     fetch(
         "https://jsonplaceholder.typicode.com/posts", 
         {
@@ -105,6 +113,25 @@ function inserir() {
     .then((json) => {
         console.log(json);
     });
+    */
+
+    let response = await fetch(
+        "https://jsonplaceholder.typicode.com/posts", 
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": 'application/json'
+            },
+            body: JSON.stringify({
+                title: "Titulo de Teste",
+                body: "Corpo de teste",
+                userId: 2
+            })
+        }
+    );
+
+    let json = await response.json();
+    console.log(json);
 }
 
 document.querySelector("#botao").addEventListener("click", clicou);
