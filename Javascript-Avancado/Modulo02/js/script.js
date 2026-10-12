@@ -83,4 +83,29 @@ function clicou() {
     // alert("OPA, CLICOU!");
 }
 
+function inserir() {
+    // GET, POST, PUT, DELETE
+    fetch(
+        "https://jsonplaceholder.typicode.com/posts", 
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": 'application/json'
+            },
+            body: JSON.stringify({
+                title: "Titulo de Teste",
+                body: "Corpo de teste",
+                userId: 2
+            })
+        }
+    )
+    .then((response) => {
+        return response.json();
+    })
+    .then((json) => {
+        console.log(json);
+    });
+}
+
 document.querySelector("#botao").addEventListener("click", clicou);
+document.querySelector("#inserir").addEventListener("click", inserir);
