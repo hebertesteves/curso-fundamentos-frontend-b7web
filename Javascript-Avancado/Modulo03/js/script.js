@@ -12,3 +12,8 @@ if (nome.indexOf("Silva") > -1) {
 }
 
 console.log(resultado);
+
+console.log(nome.slice(7, 14));
+console.log(nome.slice(-12,-4));
+console.log(nome.substring(0, 2));
+console.log(nome.substr(0, 10));
