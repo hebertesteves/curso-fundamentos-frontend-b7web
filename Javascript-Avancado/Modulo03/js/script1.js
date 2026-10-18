@@ -19,3 +19,15 @@ console.log(resultado4);
 lista.push("Prato");
 // lista[lista.length] = "Prato";
 console.log(lista);
+
+// delete lista[1];
+lista.splice(1, 1);
+console.log(lista);
+
+let lista2 = ["Forno", "Fogão", "Liquidificador"];
+let resultado5 = lista.concat(lista2);
+console.log(resultado5);
+
+lista.sort();
+lista.reverse();
+console.log(lista);
