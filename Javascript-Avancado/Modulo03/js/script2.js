@@ -16,3 +16,15 @@ console.log(day3);
 
 let day4 = new Date(0); // 01 Jan 1970
 console.log(day4.toUTCString());
+
+let day5 = new Date();
+console.log(day5.getFullYear());
+console.log(day5.getMonth());
+console.log(day5.getDay());
+console.log(day5.getDate());
+console.log(day5.getHours());
+console.log(day5.getMinutes());
+console.log(day5.getSeconds());
+console.log(day5.getMilliseconds());
+console.log(day5.getTime());
+console.log(Date.now());
