@@ -54,3 +54,20 @@ console.log(resultadoAlgumNumeroMaiorQueVinte
     ? "Sim, tem algum numero maior que 20" 
     : "Não, nenhum numero é maior que 20"
 );
+
+let resultado1 = numeros.find((item, index, array) =>  item === 16);
+console.log(resultado1);
+
+let resultado2 = numeros.findIndex((item, index, array) => item === 16);
+console.log(resultado2);
+
+let lista2 = [
+    {id: 1, nome: "Hebert", sobrenome: "Esteves"},
+    {id: 2, nome: "Paulo", sobrenome: "XYZ"},
+    {id: 3, nome: "Fulano", sobrenome: "Beltrano"}
+];
+
+let pessoa = lista2.find(item => item.sobrenome === "XYZ");
+let pessoa1 = lista2.find(item => item.id === 3);
+console.log(pessoa);
+console.log(pessoa1);
