@@ -28,3 +28,13 @@ console.log(day5.getSeconds());
 console.log(day5.getMilliseconds());
 console.log(day5.getTime());
 console.log(Date.now());
+
+let day6 = new Date();
+day6.setFullYear(2028);
+day6.setMonth(11);
+// day6.setDate(25);
+day6.setDate(day6.getDate() + 60);
+day6.setHours(day6.getHours() + 23);
+day6.setMinutes(day6.getMinutes() + 12);
+
+console.log(day6);
