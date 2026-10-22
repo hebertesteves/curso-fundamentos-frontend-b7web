@@ -1,3 +1,4 @@
+/*
 let day = new Date();
 
 console.log(day);
@@ -38,3 +39,28 @@ day6.setHours(day6.getHours() + 23);
 day6.setMinutes(day6.getMinutes() + 12);
 
 console.log(day6);
+*/
+
+let valorPI = Math.PI;
+console.log(valorPI);
+
+let valor = Math.round(3.67);
+console.log(valor);
+
+let valor1 = Math.floor(3.99);
+console.log(valor1);
+
+let valor2 = Math.ceil(3.01);
+console.log(valor2);
+
+let valor3 = Math.abs(-9.3213);
+console.log(valor3);
+
+let valor4 = Math.min(7, 100, 600, 20, 3);
+console.log(valor4);
+
+let valor5 = Math.max(7, 100, 600, 20, 3);
+console.log(valor5);
+
+let valor6 = Math.floor(Math.random() * 101); // 0 a 100
+console.log(valor6);
