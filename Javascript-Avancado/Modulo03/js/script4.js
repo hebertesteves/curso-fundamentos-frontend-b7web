@@ -13,10 +13,10 @@ let pessoa = {
     idade: 20,
     social: {
         facebook: "hebert",
-        instagram: "hebert"
-    },
-    nomeCompleto: function() {
-        return `${this.nome} ${this.sobrenome}`;
+        instagram: {
+            url: "@hebert",
+            seguidores: 1000
+        }
     }
 };
 
@@ -27,6 +27,16 @@ console.log(pessoa);
 // let idade = pessoa.idade;
 
 //let {nome:pessoaNome, sobrenome, idade} = pessoa;
-let {nome, sobrenome, idade = 0} = pessoa;
+// let { nome, sobrenome, idade = 0, social: { instagram: { url:instagram, seguidores } } } = pessoa;
+let { nome, sobrenome, idade = 0, social: { instagram } } = pessoa;
 
-console.log(nome, sobrenome, idade);
+console.log(nome, sobrenome, idade, instagram);
+
+let { facebook } = pessoa.social;
+console.log(facebook);
+
+function pegarNomeCompleto({nome = '', sobrenome = '', social: {instagram:{url:instagram}}}) {
+    return `${nome} ${sobrenome} (Siga em ${instagram})`;
+}
+
+console.log(pegarNomeCompleto(pessoa));
