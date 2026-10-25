@@ -7,6 +7,7 @@ let frase = `Meu nome é ${nome} e eu tenho ${idade} anos. E ano que vem farei $
 console.log(frase);
 */
 
+/*
 let pessoa = {
     nome: "Hebert",
     sobrenome: "Esteves",
@@ -40,3 +41,22 @@ function pegarNomeCompleto({nome = '', sobrenome = '', social: {instagram:{url:i
 }
 
 console.log(pegarNomeCompleto(pessoa));
+*/
+
+let info = ["Hebert Esteves", "Hebert", "Esteves", "@hebert"];
+
+let [ nomeCompleto, nome, sobrenome, instagram] = info;
+// let [ nomeCompleto, , , instagram] = info;
+
+console.log(nomeCompleto, nome, sobrenome, instagram);
+
+// let [nome, sobrenome, idade = 90] = ["Hebert", "Esteves"];
+// console.log(nome, sobrenome, idade);
+
+function criar() {
+    let a = [1, 2, 3];
+    return a;
+}
+
+let [a, b, c] = criar();
+console.log(a, b, c);
