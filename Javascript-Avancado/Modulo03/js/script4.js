@@ -85,3 +85,36 @@ let letrasNoNome = nome => nome.length;
 
 console.log(somar(10, 5));
 console.log(letrasNoNome("Hebert"));
+
+let numeros = [1,2,3,4];
+console.log(numeros);
+
+let numeros1 = [...numeros, 5, 6, 7, 8, 9, 10];
+console.log(numeros1);
+
+let info1 = {
+    nome: "Hebert",
+    sobrenome: "Esteves",
+    idade: 99
+};
+console.log(info1);
+
+let novaInfo = {
+    ...info1,
+    cidade: "São Paulo",
+    estado: "São Paulo",
+    pais: "Brasil"
+}
+console.log(novaInfo);
+
+function adicionarInfo(info) {
+    let novasInfo = {
+        ...info,
+        status: "OK",
+        token: "jdioaijopdas"
+    }
+
+    return novasInfo;
+}
+
+console.log(adicionarInfo({nome: "Hebert", sobrenome: "Esteves"}));
