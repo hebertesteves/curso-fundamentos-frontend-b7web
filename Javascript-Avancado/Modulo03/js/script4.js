@@ -139,3 +139,13 @@ function adicionar(nomes, ...novosNomes) {
 
 let outros = adicionar(nomes, "José", "Maria", "Harvey", "Mike");
 console.log(outros);
+
+let lista = ["ovo", "café", "arroz", "feijão", "macarrão"];
+
+console.log(lista.includes("carne"));
+console.log(lista.includes("feijão"));
+
+let nome1 = "Hebert";
+console.log(nome1.includes("t"));
+
+console.log("x".repeat(20));
