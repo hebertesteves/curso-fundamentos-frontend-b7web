@@ -118,3 +118,24 @@ function adicionarInfo(info) {
 }
 
 console.log(adicionarInfo({nome: "Hebert", sobrenome: "Esteves"}));
+
+function adicionarNumeros(...numeros) {
+    console.log(numeros);
+}
+
+adicionarNumeros(5, 6, 7, 8, 9, 10);
+
+function adicionarNomes(...nomes) {
+    console.log(nomes);
+}
+
+adicionarNomes("Hebert", "Paulo", "Antonio");
+
+let nomes = ["Hebert", "Paulo"];
+
+function adicionar(nomes, ...novosNomes) {
+   return [...nomes, ...novosNomes];
+}
+
+let outros = adicionar(nomes, "José", "Maria", "Harvey", "Mike");
+console.log(outros);
