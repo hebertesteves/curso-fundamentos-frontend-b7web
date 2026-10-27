@@ -149,3 +149,17 @@ let nome1 = "Hebert";
 console.log(nome1.includes("t"));
 
 console.log("x".repeat(20));
+
+console.log(Object.keys(lista));
+console.log(Object.values(lista));
+console.log(Object.entries(lista));
+
+let pessoa = {
+    nome: "Hebert",
+    sobrenome: "Esteves",
+    idade: 20
+};
+
+console.log(Object.keys(pessoa));
+console.log(Object.values(pessoa));
+console.log(Object.entries(pessoa));
