@@ -163,3 +163,13 @@ let pessoa = {
 console.log(Object.keys(pessoa));
 console.log(Object.values(pessoa));
 console.log(Object.entries(pessoa));
+
+let telefone = '5';
+
+console.log(telefone.padEnd(9, '*'));
+console.log(telefone.padStart(9, '*'));
+
+let cartao = '1234123412345678';
+let lastDigits = cartao.slice(-4);
+let cartaoMascarado = lastDigits.padStart(16, "*");
+console.log(cartaoMascarado);
