@@ -15,3 +15,8 @@ console.log(pessoa.idade);
 console.log(pessoa.caracteristicas[2]);
 console.log(pessoa.estetica.altura);
 console.log(pessoa.estetica.peso);
+
+let jsonString = '{"nome": "hebert", "idade": 90}';
+let pessoa1 = JSON.parse(jsonString);
+console.log(pessoa1);
+console.log(pessoa1.nome);
