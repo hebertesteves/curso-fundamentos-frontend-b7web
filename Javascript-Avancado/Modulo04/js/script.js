@@ -20,3 +20,11 @@ let jsonString = '{"nome": "hebert", "idade": 90}';
 let pessoa1 = JSON.parse(jsonString);
 console.log(pessoa1);
 console.log(pessoa1.nome);
+
+let pessoa2 = {
+    nome: "Hebert",
+    idade: 20
+}
+
+let pessoaString = JSON.stringify(pessoa2);
+console.log(pessoaString);
