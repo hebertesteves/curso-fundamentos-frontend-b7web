@@ -28,3 +28,16 @@ let pessoa2 = {
 
 let pessoaString = JSON.stringify(pessoa2);
 console.log(pessoaString);
+
+// Código Sincrono
+let nome = "Hebert";
+let sobrenome = "Esteves";
+let nomeCompleto = nome + " " + sobrenome;
+
+// Código Assíncrono
+/*
+let nome = "Hebert";
+let sobrenome = "Esteves";
+let temparatura = Maquininha.pegarTemperatura(); // Assincrona -> Requisição Fake para buscar a requisição
+let nomeCompleto = nome + " " + sobrenome;
+*/
