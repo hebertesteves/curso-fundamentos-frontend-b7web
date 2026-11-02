@@ -41,3 +41,15 @@ let sobrenome = "Esteves";
 let temparatura = Maquininha.pegarTemperatura(); // Assincrona -> Requisição Fake para buscar a requisição
 let nomeCompleto = nome + " " + sobrenome;
 */
+
+// CALLBACK
+// I'm gonna call you back = Eu te ligo de volta
+
+function alertar() {
+    console.log("Opa, tudo bem?");
+}
+
+let nome1 = "Hebert";
+setTimeout(alertar, 2000);
+let sobrenome1 = "Esteves";
+console.log("NOME COMPLETO = " + nome1 + " " + sobrenome1);
