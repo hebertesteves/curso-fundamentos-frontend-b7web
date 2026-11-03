@@ -203,3 +203,50 @@ c1.remover('Teclado');
 console.log(c1.calcularTotal()); 
 
 console.log("\n\n");
+
+/* Desafio 4 - Consulta e filtragem de usuários
+fetch · async/await · JSON · Arrays · try/catch
+
+Uma aplicação precisa consultar usuários de uma API e apresentar uma lista filtrada.
+Requisitos
+1. Crie uma função async buscarUsuarios(cidade).
+2. Faça GET em https://jsonplaceholder.typicode.com/users.
+3. Converta a resposta para JSON.
+4. Retorne um array com apenas os usuários cuja address.city seja igual à cidade informada, ignorando diferenças entre maiúsculas e minúsculas.
+5. Cada elemento retornado deve conter somente nome e email, com as chaves nome e email.
+6. Ordene o resultado alfabeticamente pelo nome, sem modificar os dados originais.
+7. Use try/catch. Em caso de falha, exiba o erro e retorne []. Não é necessário verificar response.ok.
+EXEMPLO E RESULTADO ESPERADO
+
+const usuarios = await buscarUsuarios('Gwenborough');
+// Exemplo de formato do retorno:
+// [
+//   { nome: 'Leanne Graham', email: 'Sincere@april.biz' }
+// ]
+
+Critérios: Requisição e conversão corretas, filtro, transformação, ordenação e tratamento de falhas.
+*/
+
+async function buscarUsuarios(cidade) {
+    try {
+        let response = await fetch("https://jsonplaceholder.typicode.com/users");
+        let json = await response.json();
+
+        let usuarios = json
+                .filter(usuario => usuario.address.city.toLowerCase() === cidade.toLowerCase())
+                .map(usuario => {
+                    return {
+                        nome: usuario.name,
+                        email: usuario.email
+                    }
+                })
+                .sort((usuario1, usuario2) => usuario1.nome - usuario2.nome);
+
+        return usuarios;
+    } catch(error) {
+        console.log("ERROR: " + error);
+        return [];
+    }
+}
+
+buscarUsuarios('Gwenborough');
