@@ -311,3 +311,77 @@ async function cadastrarTarefa(titulo, usuarioId) {
 
 cadastrarTarefa("  Estudar JavaScript  ", 3);
 cadastrarTarefa("     ", 3);
+
+/* Desafio 6 - Mini sistema de produtos
+POO · Métodos · Arrays · async/await · Integração
+
+Você vai construir uma pequena classe responsável por carregar e consultar produtos de uma API.
+Requisitos
+1. Crie uma classe CatalogoProdutos com constructor() que inicialize uma lista vazia de produtos.
+2. Implemente um método async carregar() que faça GET em https://dummyjson.com/products?limit=30, converta a resposta para JSON e armazene em uma propriedade da instância o array presente em dados.products.
+3. carregar() deve retornar true quando a operação terminar com sucesso; em caso de falha, deve retornar false e preservar a lista anterior. Use try/catch. Não é necessário verificar response.ok.
+4. Implemente buscarPorNome(termo), que retorne produtos cujo title contenha o termo, ignorando maiúsculas e minúsculas.
+5. Implemente listarPorPreco(maximo), que retorne um novo array com produtos de price menor ou igual ao máximo, ordenados por preço crescente.
+6. Implemente resumo(), que retorne { quantidade, precoMedio }. Se a lista estiver vazia, o preço médio deve ser 0.
+7. Demonstre como instanciar a classe, carregar os dados e chamar os três métodos de consulta.
+EXEMPLO E RESULTADO ESPERADO
+
+const catalogo = new CatalogoProdutos();
+const carregou = await catalogo.carregar();
+
+console.log(carregou); // true, se a API responder
+console.log(catalogo.buscarPorNome('phone'));
+console.log(catalogo.listarPorPreco(100));
+console.log(catalogo.resumo());
+// { quantidade: 30, precoMedio: ... }
+
+Critérios: Integração dos conceitos, estado da instância, métodos de consulta, ordenação, cálculos e tratamento de falhas.
+*/
+
+class CatalogoProdutos {
+    constructor() {
+        this.listaProdutos = [];
+    }
+
+    async carregar() {
+        try {
+            let response = await fetch("https://dummyjson.com/products?limit=30");
+            let json = await response.json();
+            this.listaProdutos = json.products;
+
+            return true;
+        } catch(error) {
+            console.log("ERROR: " + error);
+            return false;
+        }
+    }
+
+    buscarPorNome(termo) {
+        return this.listaProdutos.filter(produto => produto.title.toLowerCase().includes(termo.toLowerCase()));
+    }
+
+    listarPorPreco(maximo) {
+        return this.listaProdutos.filter(produto => produto.price <= maximo).sort((p1, p2) => p1.price - p2.price);
+    }
+
+    resumo() {
+        if (this.listaProdutos.length === 0) return {quantidade: 0, precoMedio: 0};
+
+        let quantidade = this.listaProdutos.length;
+        let precoMedio = this.listaProdutos.reduce((total, produto) => total + produto.price, 0) / quantidade;
+
+        return {
+            quantidade,
+            precoMedio
+        };
+    }
+}
+
+
+const catalogo = new CatalogoProdutos();
+const carregou = await catalogo.carregar();
+
+console.log(carregou);
+console.log(catalogo.buscarPorNome('phone'));
+console.log(catalogo.listarPorPreco(100));
+console.log(catalogo.resumo());
