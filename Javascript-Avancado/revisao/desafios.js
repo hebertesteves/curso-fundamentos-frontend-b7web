@@ -250,3 +250,64 @@ async function buscarUsuarios(cidade) {
 }
 
 buscarUsuarios('Gwenborough');
+
+/* Desafio 5 - Cadastro de tarefas via API
+POST · JSON.stringify · Headers · async/await · Manipulação
+
+Implemente uma função que prepare dados recebidos de um formulário e envie uma tarefa à API.
+Requisitos
+1. Crie uma função async cadastrarTarefa(titulo, usuarioId).
+2. Remova espaços nas extremidades do título usando trim().
+3. Se o título ficar vazio ou usuarioId não for um inteiro positivo, retorne null sem fazer a requisição.
+4. Envie um POST para https://jsonplaceholder.typicode.com/todos.
+5. Configure Content-Type: application/json.
+6. Envie no body um JSON com title, userId e completed: false.
+7. Converta a resposta para JSON e retorne um objeto contendo somente id, title e completed.
+8. Use try/catch e retorne null se ocorrer uma falha. Não é necessário verificar response.ok.
+EXEMPLO E RESULTADO ESPERADO
+
+const tarefa = await cadastrarTarefa('  Estudar JavaScript  ', 3);
+// Formato esperado do retorno:
+// {
+//   id: 201,
+//   title: 'Estudar JavaScript',
+//   completed: false
+// }
+
+await cadastrarTarefa('   ', 3); // null
+
+Critérios: Validação antes da requisição, contrato correto da API, transformação de dados e tratamento de erros.
+*/
+
+async function cadastrarTarefa(titulo, usuarioId) {
+    if (titulo.trim() === "" || usuarioId <= 0 || !Number.isInteger(usuarioId)) return null;
+
+    try {
+        let response = await fetch("https://jsonplaceholder.typicode.com/todos", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                title: titulo.trim(),
+                userId: usuarioId,
+                completed: false,
+            })
+        });
+
+        let json = await response.json();
+
+        const {id, title, completed} = json;
+        return {
+            id,
+            title, 
+            completed
+        };
+    } catch (error) {
+        console.log("ERROR: " + error);
+        return [];
+    }
+}
+
+cadastrarTarefa("  Estudar JavaScript  ", 3);
+cadastrarTarefa("     ", 3);
