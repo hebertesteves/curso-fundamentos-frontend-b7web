@@ -53,3 +53,29 @@ let nome1 = "Hebert";
 setTimeout(alertar, 2000);
 let sobrenome1 = "Esteves";
 console.log("NOME COMPLETO = " + nome1 + " " + sobrenome1);
+
+function pegarTemperatura() {
+    return new Promise(function(resolve, reject) {
+        console.log("pegando temparatura...");
+
+        setTimeout(function() {
+            resolve("40 na sombra")
+        }, 2000);
+    });
+}
+
+// Usando a Promise
+console.log("código antes!");
+
+let temp = pegarTemperatura();
+
+console.log("código durante!");
+
+temp.then(function(resultado) {
+    console.log("TEMPARATURA: " + resultado);
+});
+temp.catch(function(error) {
+    console.log("DEU ERRO: " + error);
+});
+
+console.log("código depois!");
