@@ -79,3 +79,13 @@ temp.catch(function(error) {
 });
 
 console.log("código depois!");
+
+function loadPosts() {
+    document.getElementById("posts").innerHTML = 'Carregando...';
+    fetch("https://jsonplaceholder.typicode.com/posts")
+        .then(resultado => resultado.json())
+        .then(json => {
+            document.getElementById("posts").innerHTML = `${json.length} posts`;
+        })
+        .catch(error => console.log("Deu problema: " + error));
+}
