@@ -80,6 +80,7 @@ temp.catch(function(error) {
 
 console.log("código depois!");
 
+/*
 function loadPosts() {
     document.getElementById("posts").innerHTML = 'Carregando...';
     fetch("https://jsonplaceholder.typicode.com/posts")
@@ -88,6 +89,20 @@ function loadPosts() {
             montarBlog(json);
         })
         .catch(error => console.log("Deu problema: " + error));
+}
+*/
+
+// Usando Async e Await
+async function loadPosts() {
+    document.getElementById("posts").innerHTML = 'Carregando...';
+    
+    try {
+        let req = await fetch("https://jsonplaceholder.typicode.com/posts");
+        let json = await req.json();
+        montarBlog(json);
+    } catch (error) {
+        console.log("Deu problema: " + error)
+    }
 }
 
 function montarBlog(lista) {
