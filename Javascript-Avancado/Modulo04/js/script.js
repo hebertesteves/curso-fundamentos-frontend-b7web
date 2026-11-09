@@ -116,3 +116,23 @@ function montarBlog(lista) {
 
     document.getElementById("posts").innerHTML = html;
 }
+
+async function insertPosts() {
+    document.getElementById("posts").innerHTML = 'Carregando...';
+
+    let req = await fetch("https://jsonplaceholder.typicode.com/posts", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            title: "Titulo de Teste",
+            body: "Corpo de teste",
+            userId: 4
+        })
+    });
+
+    let json = await req.json();
+
+    console.log(json);
+}
