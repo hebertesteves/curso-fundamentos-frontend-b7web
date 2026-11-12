@@ -200,3 +200,62 @@ console.log(ana.consultarHistorico()[0].valor);
 // 100
 console.log(ana.consultarHistorico().length);
 //3
+
+console.log("\n\n");
+
+// Desafio 4
+
+function verificarEstoque(produtoId) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (produtoId === 999) {
+                reject(new Error("Serviço indisponível"));
+                return;
+            }
+
+            const produtos = {
+                1: { nome: "Notebook", quantidade: 5 },
+                2: { nome: "Mouse", quantidade: 0 },
+                3: { nome: "Teclado", quantidade: 10 }
+            };
+
+            resolve(produtos[produtoId] ?? null);
+        }, 500);
+    });
+}
+
+async function processarPedido(produtoId, quantidade) {
+    const ehInteiroPositivo = (valor) => Number.isInteger(valor) && valor > 0;
+    if (!ehInteiroPositivo(produtoId) || !ehInteiroPositivo(quantidade)) return {sucesso: false, mensagem: "Parâmetros inválidos"};
+
+    const resultado = await verificarEstoque(produtoId)
+        .then(produto => {
+            if (produto === null) return {sucesso: false, mensagem: "Produto não encontrado"};
+
+            if (quantidade > produto.quantidade) return {sucesso: false, mensagem: "Estoque insuficiente"};
+            
+            return {
+                sucesso: true,
+                mensagem: "Pedido aprovado",
+                produto: produto.nome,
+                quantidade: produto.quantidade,
+            }
+        })
+        .catch(() => {
+            return {sucesso: false, mensagem: "Erro ao consultar estoque"};
+        });
+
+    return resultado;
+}
+
+async function executar() {
+    await processarPedido(1, 2).then(response => console.log(response)).catch(response => console.log(response));
+    await processarPedido(2, 1).then(response => console.log(response)).catch(response => console.log(response));
+    await processarPedido(3, 15).then(response => console.log(response)).catch(response => console.log(response));
+    await processarPedido(50, 1).then(response => console.log(response)).catch(response => console.log(response));
+    await processarPedido(999, 1).then(response => console.log(response)).catch(response => console.log(response));
+    await processarPedido("1", 2).then(response => console.log(response)).catch(response => console.log(response));
+    await processarPedido(1, 1.5).then(response => console.log(response)).catch(response => console.log(response));
+}
+
+executar();
