@@ -114,3 +114,89 @@ lista[0].quantidade = 500;
 
 console.log(estoque.consultarProduto("Mouse"));
 // { nome: "MOUSE", quantidade: 11 }
+
+console.log("\n\n");
+
+// Desafio 3
+
+class CarteiraDigital {
+    #saldo;
+    historicoPagamentos = [];
+
+    constructor(titular, saldoInicial = 0) {
+        if (titular.trim() === '' 
+            || typeof titular !== "string" 
+            || !Number.isFinite(saldoInicial) 
+            || saldoInicial < 0
+        ) throw new Error();
+
+        this.titular = titular.trim();
+        this.#saldo = saldoInicial;
+    }
+
+    depositar(valor) {
+        if (!Number.isFinite(valor) || valor <= 0) return false;
+
+        this.#saldo += valor;
+        this.historicoPagamentos.push({tipo: "DEPOSITO", valor});
+        return true;
+    }
+
+    pagar(valor, descricao) {
+        const descricaoPagamento = descricao.trim();
+        if (!Number.isFinite(valor) 
+            || valor <= 0 
+            || descricaoPagamento === '' 
+            || typeof descricaoPagamento !== 'string' 
+            || valor > this.#saldo
+        ) return false;
+
+        this.#saldo -= valor;
+        this.historicoPagamentos.push({tipo: "PAGAMENTO", valor, descricao: descricaoPagamento});
+        return true;
+    }
+
+    transferir(destino, valor) {
+        if (destino.titular === this.titular 
+            || !Number.isFinite(valor) 
+            || valor <= 0
+            || valor > this.#saldo
+        ) return false;
+
+        destino.depositar(valor);
+        this.#saldo -= valor;
+        
+        this.historicoPagamentos.push({tipo: "TRANSFERENCIA_ENVIADA", valor, destino: destino.titular});
+        destino.historicoPagamentos.push({tipo: "TRANSFERENCIA_RECEBIDA", valor, origem: this.titular});
+        return true;
+    }
+
+    consultarSaldo() {
+        return this.#saldo;
+    }
+
+    consultarHistorico() {
+        return structuredClone([...this.historicoPagamentos]);
+    }
+}
+
+const ana = new CarteiraDigital(" Ana ", 200);
+const bruno = new CarteiraDigital("Bruno", 50);
+
+console.log(ana.depositar(100));       // true
+console.log(ana.pagar(40, " Mercado ")); // true
+console.log(ana.transferir(bruno, 80)); // true
+console.log(ana.transferir(ana, 10));   // false
+console.log(ana.consultarSaldo());      // 180
+console.log(bruno.consultarSaldo());    // 130
+console.log(ana.consultarHistorico());
+console.log("\n")
+
+const historico = ana.consultarHistorico();
+historico[0].valor = 9999;
+historico.push({ tipo: "DEPOSITO", valor: 5000 });
+
+console.log(ana.consultarHistorico()[0].valor);
+// 100
+console.log(ana.consultarHistorico().length);
+//3
